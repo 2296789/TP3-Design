@@ -12,7 +12,9 @@
     50% {transform: translateX(-3em);}
     100% {transform: translateX(0em);}
 }
-
+:root {
+    --main-bg-color: #FFB800;
+}
 *{
     box-sizing: border-box;
 }
@@ -34,7 +36,7 @@ nav a{
     font-size: 0.6em;
     font-weight:bold;
     color: #06438B;
-    background-color: #FFB800;
+    background-color: var(--main-bg-color);
     text-transform: uppercase;
     border: #06438B solid 1px;
     border-radius: 100%;
@@ -47,12 +49,12 @@ nav a{
     margin-left: 1.5rem;
     justify-content: center;
 }
-h1,h2,h3{
+h1, h2, h3{
     font-family: 'Oswald', sans-serif;
 }
 nav a.active{
     background-color: #06438B;
-    color: #FFB800;
+    color: var(--main-bg-color);
     border: #FFB800 solid 1px;
 }
 nav a:hover{
@@ -79,13 +81,20 @@ main{
 div{
     flex: 1;
 }
+img{
+    width: 50rem;
+    animation-duration: 2s;
+    position: relative;
+    animation-timing-function: ease;
+}
 aside{
     flex: 3;
 }
-.web{
-    height: 35rem;
-    width: 35rem;
-    border-radius: 100%;
+aside img{
+    animation-name: move-right;
+}
+aside img:nth-of-type(odd){
+    animation-name: move-left;
 }
 button{
     top: 32rem;
@@ -93,7 +102,7 @@ button{
     position: fixed;
     z-index: 1;
     color:#06438B;
-    background-color:#FFB800;
+    background-color: var(--main-bg-color);
     width: 3.5rem;
     height: 2.5rem;
     border-radius: 20%;
@@ -107,20 +116,12 @@ button:hover {
     font-size: 1.3em;
     background-color:#ffffff;
 }
-img{
-    width: 50rem;
-    animation-duration: 2s;
-    position: relative;
-    animation-timing-function: ease;
-}
 footer{
     text-align: center;
     color: #06438B;
 }
-
-aside img:nth-of-type(odd){
-    animation-name: move-left;
-}
-aside img{
-    animation-name: move-right;
+.web{
+    height: 35rem;
+    width: 35rem;
+    border-radius: 100%;
 }
