@@ -4,25 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/assets/style/style.css">
     <title>TP3-Xuying Wu</title>
 </head>
-<body style="background-color: #FFB800;">
-    <nav role="menu">
-        <a href="travail.html" role="menuitem" >Travail</a>
-        <a href="service.html" role="menuitem" class="active">Service</a>
-        <a href="competence.html" role="menuitem">Compétence</a>
-        <a href="nouvelles.html" role="menuitem">Nouvelles</a>
-        <a href="contact.html" role="menuitem">À propos</a>
-    </nav>
-    <main style="color: #06438B;">
+<body id="index">
+    <?php include ("composants/nav.php") ?>
+    <main>
         <aside>
-            <img src="img/brand-1.jpg" alt="">
-            <img src="img/brand-2.jpg" alt="">
-            <img src="img/brand-3.jpg" alt="">
-            <img src="img/brand-4.jpg" alt="">
+            <img src="/assets/imgs/brand-1.jpg">
+            <img src="/assets/imgs/brand-2.jpg">
+            <img src="/assets/imgs/brand-3.jpg">
+            <img src="/assets/imgs/brand-4.jpg">
         </aside>
-        <div style="margin-right: 50px">
+        <div>
             <h2>AGENCE DE MARQUE </h2>
             <p>En tant qu'agence de conception Web à service complet qui existe depuis près d'une décennie, nous sommes restés agiles et adaptables, perfectionnant uniquement les compétences qui aident les clients comme vous à se développer et à produire. Notre agence a les côtelettes techniques et créatives pour rendre la présence Web de votre entreprise puissante. Nous effectuons également la maintenance du site Web ou formons votre personnel. Jetez un coup d'œil à notre portefeuille de conception professionnelle ou obtenez un audit de site Web SEO gratuit.</p>
         </div>
@@ -31,5 +25,6 @@
 </body>
 <footer>
     Des drois.....
-    </footer>
+</footer>
+<!--(php -S localhost:8000) || http://localhost:8000 -->
 </html>

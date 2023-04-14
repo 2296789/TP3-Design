@@ -1,8 +1,16 @@
+@import url('style-index.css');
+@import url('style-competence.css');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&family=Oswald&display=swap');
-@keyframes move {
-    0% {left: 0px;}
-    50% {left: 100px;}
-    100% {left: 0px;}
+
+@keyframes move-right {
+    0% {transform: translateX(0em);}
+    50% {transform: translateX(3em);}
+    100% {transform: translateX(0em);}
+}
+@keyframes move-left {
+    0% {transform: translateX(0em);}
+    50% {transform: translateX(-3em);}
+    100% {transform: translateX(0em);}
 }
 
 *{
@@ -14,7 +22,7 @@ body, footer{
 }
 nav{
     height: 100%;
-    width: 10em;
+    width: 10rem;
     position: fixed;
     overflow: auto;
     display: flex;
@@ -30,14 +38,14 @@ nav a{
     text-transform: uppercase;
     border: #06438B solid 1px;
     border-radius: 100%;
-    height: 80px;
-    width: 80px;
+    height: 5rem;
+    width: 5rem;
     align-items: center;
     text-align: center;
-    display: block;
-    margin-top: 40px;
-    margin-left: 40px;
-    padding-top: 50px;
+    display: flex;
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+    justify-content: center;
 }
 h1,h2,h3{
     font-family: 'Oswald', sans-serif;
@@ -51,19 +59,19 @@ nav a:hover{
     background-color: #ffffff;
     color: #06438B;
     border: #06438B solid 1px;
-    width: 90px;
-    height: 90px;
-    margin-top: 30px;
-    margin-left: 34px;
+    width: 6rem;
+    height: 6rem;
+    margin-top: 1.5rem;
+    margin-left: 2rem;
     transition-duration: 1s;
-    font-size: 1em;
+    font-size: 0.75em;
 }
 main{
-    margin-left: 180px;
+    margin-left: 10rem;
     flex: 1;
     display: flex;
     flex-flow: row;
-    gap: 30px;
+    gap: 10rem;
     height: 100%;
     align-items: center;
     min-height: 100vh;
@@ -75,34 +83,44 @@ aside{
     flex: 3;
 }
 .web{
-    height: 550px;
-    width: 550px;
+    height: 35rem;
+    width: 35rem;
     border-radius: 100%;
 }
 button{
-    top: 600px;
-    left: 180px;
+    top: 32rem;
+    left: 3.5rem;
     position: fixed;
     z-index: 1;
     color:#06438B;
     background-color:#FFB800;
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
+    width: 3.5rem;
+    height: 2.5rem;
+    border-radius: 20%;
 }
 button:hover {
-    width: 60px;
-    height: 60px;
+    top: 31rem;
+    left: 3.1rem;
+    width: 4.5rem;
+    height: 3.5rem;
     transition-duration: 2s;
     font-size: 1.3em;
+    background-color:#ffffff;
 }
 img{
-    width: 800px;
-    animation-name: move;
+    width: 50rem;
+    animation-duration: 2s;
     position: relative;
     animation-timing-function: ease;
 }
 footer{
     text-align: center;
     color: #06438B;
+}
+
+aside img:nth-of-type(odd){
+    animation-name: move-left;
+}
+aside img{
+    animation-name: move-right;
 }
